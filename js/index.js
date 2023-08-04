@@ -14,6 +14,7 @@ const skills = [
   "Bootstrap",
   "API",
   "GSAP",
+  "Figma",
   "Excellent written and verbal communication skills",
   "Strong organizational and time-management skills",
   "Proven problem-solving abilities with quick and effective issue resolution",
