@@ -50,10 +50,10 @@ Now, open the project directory in your code editor and continue to the next sec
 
 For this assignment, there are some general requirements but the design is up to you! This is your chance to be creative and transform your webpage into a reflection of who you are.
 
-- [ ] Change the background color of the page body
+- [ ] Change the background color of the page body 
 - [ ] Change the default text color
 - [ ] Customize the font family
-  - (Optional) Load in a font family from [Google Fonts](https://fonts.google.com/)
+- (Optional) Load in a font family from [Google Fonts](https://fonts.google.com/)
 - [ ] Add spacing (padding/margin) between sections
 - [ ] Change the font size, weight, and color of all headings
 - [ ] Transform the "Experience" list items into styled blocks
