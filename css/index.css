@@ -1,0 +1,597 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* .hidden {
+  display: none;
+} */
+
+body {
+  background-color: #303030;
+  color: #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: 'Roboto Serif', serif;
+  max-width: 1280px;
+  width: 100%;
+}
+
+section {
+  padding: 100px 50px 100px;
+}
+
+h1 {
+  color: #fff;
+  margin: 30px 0;
+  font-size: 40px;
+}
+
+h2 {
+  color: #03dac6;
+  text-shadow: 3px 2px 10px rgba(175, 175, 175, 0.8);
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.box__about h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+  color: #03dac6;
+}
+
+h4 {
+  font-size: 20px;
+  color: #03dac6;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+  color: #88a0a6;
+}
+
+li {
+  font-size: 15px;
+}
+
+span {
+  font-size: 15px;
+  /* color: #04bbaa; */
+}
+
+/* Header styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #303030;
+  padding: 20px 50px 10px;
+  box-shadow: 5px 1px 10px rgba(165, 165, 165, 0.6);
+}
+
+header .logo {
+  font-size: 20px;
+  color: #e4e4e4;
+}
+
+header .logo .color {
+  color: #04bbaa;
+  font-size: 14px;
+  margin: 5px 0;
+  display: block;
+}
+
+header .navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+}
+
+header .navbar ul li a {
+  font-size: 18px;
+  color: #03dac6;
+  text-decoration: none;
+}
+
+header .navbar ul li a:hover {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+/*--------------------- Burger menu styles - start -  Will continue to work later--------------------*/
+
+/*--------------------- Burger menu styles - end--------------------*/
+
+/*------------------- Center the entire section -------------*/
+.container__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 0;
+}
+
+/* Style for the main content box */
+.box__about {
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box__about p {
+  line-height: 40px;
+  max-width: 1000px;
+}
+
+.box__about-skills {
+  list-style-type: none;
+  font-size: 20px;
+  margin: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.box__about-skills li {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px 10px;
+  border: 1px solid white;
+  border-radius: 3px;
+  box-shadow: 5px 2px 5px rgb(145, 144, 144);
+}
+
+.box__about-skills li:hover {
+  transform: translateX(10px);
+  transition: 1s all ease;
+}
+
+.box__skills img {
+  width: 55px;
+}
+
+.box__skills li {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.box__about-skills strong {
+  color:#04bbaa;
+}
+
+
+/*------------------- Style for buttons --------------*/
+
+.btn-set {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn1 {
+  background-color: #04bbaa;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn2 {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn1:hover,
+.btn2:hover {
+  background-color: #303030;
+  font-weight: 400;
+  border: 2px solid #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn1 a {
+  color: #fff;
+}
+
+.btn2 a {
+  color: #04bbaa;
+}
+
+.btn1:hover a,
+.btn2:hover a {
+  color: #04bbaa;
+}
+
+/*-------------------- Skills -------------------*/
+/* Center the entire section */
+#skills {
+  padding: 50px 50px 50px;
+  width: 100%;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+/* Style for the skills list container */
+.box__skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+/* Style for skills list items */
+.box__skills li {
+  font-size: 18px;
+  margin: 50px 0 0;
+  color: #e4e4e4;
+  list-style-type: none;
+  text-align: center;
+}
+
+/*---------------------- Experience section -------------------*/
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the experience list */
+.experience ul {
+  list-style-type: none;
+  text-align: left;
+  margin: 50px 0 25px;
+}
+
+.experience li {
+  margin-bottom: 10px;
+}
+
+/* Style for the span elements */
+.experience span {
+  color: #03dac6;
+}
+
+/*------------------ Projects section -------------------*/
+  #projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}  
+
+/* --------- cards --------------- */
+
+.projects {
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.projects__header {
+  margin: 10px 0 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.projects__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projects__card {
+  margin: 50px;
+  width: 300px;
+}
+
+.projects__card:hover {
+  filter: opacity(0.6)
+}
+
+.projects__card a {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.projects__card img{
+  width: 100%;
+}
+.projects__card .projects__subtitle {
+  font-size: 23px;
+  text-align: center;
+}
+.projects__card .projects__title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.projects__card h4 {
+  margin-bottom: 20px;
+}
+
+
+/*--------------- Connect Section------------*/
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+
+/* Style for the connect list container */
+.connect-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  list-style-type: none;
+  font-size: 18px;
+  margin: 40px 0 0;
+}
+
+.link-item a {
+  color: #e4e4e4;
+}
+
+.link-item a:hover {
+  text-decoration: underline;
+}
+
+/*--------------- Form Section-----------------*/
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px 100px;
+}
+
+#form h2 {
+  font-size: 20px;
+}
+
+/* Style for the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 30px 0;
+}
+
+/* Style for form labels */
+form label {
+  font-size: 16px;
+  color: #e4e4e4;
+  margin: 0 0 5px;
+}
+
+/* Style for form inputs */
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #444;
+  color: #e4e4e4;
+  border-radius: 5px;
+  margin: 0 0 10px 0;
+}
+
+/* Style for form submit button */
+form button .btn1 {
+  background-color: #03dac6;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 15px 32px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+form button:hover {
+  background-color: #02b7a8;
+}
+
+/*--------------- Messages --------------*/
+#messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* Style for the messages list container */
+.messages {
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+/* Style for message list items */
+.messages li {
+  font-size: 15px;
+  color: #e4e4e4;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.messages li a {
+  color: #e4e4e4;
+  padding: 0 10px 0 0;
+}
+
+.messages li span {
+  padding: 0 40px 0 0;
+}
+
+.messages button {
+  background-color: #04bbaa;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/*---------- Footer -------------*/
+footer {
+  width: 100%;
+  background-color: #303030;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Style for social icons */
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  margin: 0 0 20px 0;
+}
+
+.icons__style {
+  font-size: 1.5rem;
+  background: linear-gradient(to left, #04bbaa, #fff3e4);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: color 0.3s;
+}
+
+
+/* -------------   Media queries ------  */
+
+
+@media all and (max-width: 1280px) {
+}
+
+@media all and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media all and (max-width: 912px) {
+  html {
+    font-size: 55%;
+  }
+  header #burger-menu {
+    display: block;
+  }
+
+  header .navbar {
+    position: fixed;
+    opacity: 0;
+  }
+}
+
+@media all and (max-width: 820px) {
+  header #burger-menu {
+    display: block;
+  }
+
+  header .navbar {
+    position: fixed;
+    opacity: 0;
+  }
+}
+
+@media all and (max-width: 768px) {
+}
+
+@media all and (max-width: 540px) {
+}
+
+@media all and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  html {
+    font-size: 50%;
+  }
+
+  section {
+    padding: 1rem 5%;
+    padding-top: 5.5rem;
+  }
+
+  #burger-menu span {
+    right: -20px;
+    top: 13px;
+    width: 30px;
+  }
+
+  .menu {
+    min-height: 70vh;
+  }
+}
+
+@media all and (max-width: 414px) {
+}
+
+@media all and (max-width: 280px) {
+}
+
+
+
+
+

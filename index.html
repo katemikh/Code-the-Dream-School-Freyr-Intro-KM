@@ -1,163 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="author" content="Kateryna Mikhailiuk" />
-    <meta name="description" content="Portfolio website for Kateryna Mikhailiuk" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Portfolio website for Kateryna Mikhailiuk"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="keywords"
       content="Kateryna Mikhailiuk, Portfolio, Personal Website, Web Developer"
     />
     <title>Kateryna Mikhailiuk</title>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500&family=Roboto:wght@300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icons style -->
+    <script
+      src="https://kit.fontawesome.com/04ccdb2707.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
 
-    <h1> Kateryna Mikhailiuk</h1>
+    <!-- HEADER SECTION -->
 
-    <section id="about">
-        <h2> About </h2>
-        <p>Hi there! I'm Kateryna Mikhailiuk and I'm a Web Developer from Ontario, Canada.
-        I have 10+ years of experience in travel and aviation industries.
-        I decided to change my career direction and currently expanding expertise to the IT field. 
-        About a year ago I found myself in Web Development and Coding became my passion. 
-        I love to create beautifully designed, intuitive, functional websites and build multi-purpose apps. 
-        Passionate about what is possible to achieve using the latest technologies and eager to learn new things!
-        Interested in entire Front-End spectrum working on new projects with smart, creative, positive people!</p>
-    </section>
+    <header>
+      <a href="#" class="logo"
+        >Kateryna Mikhailiuk <span class="color">Front-End Developer</span></a
+      >
+      <!-- BURGER MENY SECTION  -->
 
-    <section id="experience">
-        <h2> Experience </h2>
+      <!-- <div id="burger-menu">
+        <span></span>
+      </div> -->
+      <!-- <div id="menu">
         <ul>
-            <li> 1+ years in Web Development</li>
-            <li> 10+ years in Travel and Aviation industries </li>
-            <li> Project Management and Coordination  </li>
-            <li> Business Operations, Partner`s relations, Sales, Customer Service</li>
+          <li><a class="active" href="/index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Connect</a></li>
+          <li><a href="#messages">Message Me</a></li>
         </ul>
+      </div> -->
 
+      <!-- NAVBAR SECTION -->
+      <nav class="navbar">
         <ul>
-         <li>
-              <span>
-                <strong>Front End Developer</strong> &mdash;
-                Freelance
-            </span>
-            <span>Present</span>
-        </li>
-
-             <li>
-              <span>
-                <strong>Business Development Manager/Negotiation and Partners Relations</strong> &mdash;
-                Zhara Travel Compnay
-            </span>
-            <span>Apr 2020-Feb 2022</span>
-        </li>
-
-         <ul>   
-            <li> Built and developed new and strategic relationships with core partners/educational institutions on the Canadian market, which leads to the long-lasting corporate relationship, competitive contracts, and revenue grows</li>
-            <li> Obtained exclusive contracts with educational institutions (Colleges, Universities, Schools, etc) by researching, negotiating market prices, and developing strong B2B partnership</li>
-            <li> Developed operational procedures and created the partner's database</li>
-            <li> Worked with documents and collaborated with immigration authorities, Visa Centers, etc.</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
         </ul>
+      </nav>
+    </header>
 
-             <li>
-            <span>
-                <strong>Travel /& Sales Consultant</strong> &mdash;
-                TRIPCENTRAL.CA, Travel Compnay
-            </span>
-            <span>Oct 2016–Mar 2020</span>
-        </li>
-         <ul> 
-        <li>Developed schedules, plans, and work breakdown structures to arrange individual and group itineraries, taking into account business costs and target margins. </li>
-        <li>Managed client accounts, both existing and new, by analyzing market needs and generating a robust list of quality leads.</li>
-        <li>Effectively communicated with individual clients, presenting product packages utilizing extensive product knowledge and leveraging various travel arrangement tools such as Sabre.</li>
-        <li>Negotiated with third-party service providers to secure the best prices and value for customers.</li>
+    <!-- ABOUT SECTION -->
+
+    <section id="about" class="container__about">
+      <div class="box__about">
+        <!-- <h2> About </h2> -->
+        <h2 class="">Hello there 👋 I am</h2>
+        <h1 class="">Kateryna Mikhailiuk</h1>
+        <img src="./media/img-skills/logo-km.jpg" alt="logo-pic" width="270px">
+        <p class="">
+          Hi there! I'm Kateryna Mikhailiuk and I'm a Web Developer from
+          Ontario, Canada. I have 10+ years of experience in travel and aviation
+          industries. I decided to change my career direction and currently
+          expanding expertise to the IT field. About a year ago I found myself
+          in Web Development and Coding became my passion. I love to create
+          beautifully designed, intuitive, functional websites and build
+          multi-purpose apps. Passionate about what is possible to achieve using
+          the latest technologies and eager to learn new things! Interested in
+          entire Front-End spectrum working on new projects with smart,
+          creative, positive people!
+        </p>
+        <ul class="box__about-skills">
+          <li>1+ years in Web Development</li>
+          <li>10+ years in Travel and Aviation industries</li>
+          <li>Project Management and Coordination</li>
+          <li>
+            Business Operations, Partner`s relations, Sales, Customer Service
+          </li>
         </ul>
+      </div>
 
-               <li>
-            <span>
-                <strong>AIR LINK INTERNATIONAL</strong> &mdash;
-                Fixed-base operator (FBO) providing full business aviation services, such as perfectly coordinated flight operation, charter, and aircraft management.
-            </span>
-            <span>Jun 2007–Dec 2013</span>
+      <div class="btn-set">
+  <button class="btn1" title="View Resume">
+    <span class="view-cv">View Resume</span>
+  </button>
+  <button class="btn2" title="Get in touch">
+    <a href="">
+      <span class="gt">Get in touch</span>
+    </a>
+  </button>
+</div>
+  </section>
+
+    <section id="experience" class="experience hidden box__about-skills">
+      <h2>Experience</h2>
+      <ul class="box__about-skills">
+        <li>
+          <span> <strong>Front End Developer</strong> &mdash; Freelance </span>
+          <span>Present</span>
         </li>
-            <ul> 
-                <li>Developed and implemented strategies to establish and enhance the travel services department within a fixed-base operation company </li>
-                <li>Oversaw all aspects of travel services, including crew travel arrangements, tourism department development, and partnerships with travel providers</li>
-                <li>Negotiated contracts with travel providers, ensuring favorable terms and cost-effective solutions for the company</li>
-                <li>Collaborated with various departments to streamline operational processes and optimize workflow</li>
-                <li>Implemented revenue-generating initiatives to drive additional income for the company through travel services</li>
-                <li>Monitored and analyzed departmental performance, identifying areas for improvement and implementing corrective actions</li>
-                <li>Cultivated and maintained strong relationships with travel providers, fostering long-term partnerships</li>
-                <li>Led a team of travel professionals, providing guidance, support, and training to ensure the delivery of exceptional services</li>
-                <li> Led and mentored a team of travel professionals, ensuring exceptional service delivery Managed staff hiring process, including recruitment, interviewing, and candidate selection Provided ongoing coaching and mentoring to foster professional growth and development</li>
-                <li>Prepared comprehensive reports and presentations on departmental performance, revenue generation, and partner relationships for senior management</li>
-    </ul>
-    </ul>
-
+        <li>
+          <span>
+            <strong
+              >Business Development Manager/Negotiation and Partners
+              Relations</strong
+            >
+            &mdash; Zhara Travel Compnay
+          </span>
+          <span>Apr 2020-Feb 2022</span>
+        </li>
+        <!-- <ul>
+          <li>
+            Built and developed new and strategic relationships with core
+            partners/educational institutions on the Canadian market, which
+            leads to the long-lasting corporate relationship, competitive
+            contracts, and revenue grows
+          </li>
+          <li>
+            Obtained exclusive contracts with educational institutions
+            (Colleges, Universities, Schools, etc) by researching, negotiating
+            market prices, and developing strong B2B partnership
+          </li>
+          <li>
+            Developed operational procedures and created the partner's database
+          </li>
+          <li>
+            Worked with documents and collaborated with immigration authorities,
+            Visa Centers, etc.
+          </li>
+        </ul> -->
+        <li>
+          <span>
+            <strong>Travel /& Sales Consultant</strong> &mdash; TRIPCENTRAL.CA,
+            Travel Compnay
+          </span>
+          <span>Oct 2016–Mar 2020</span>
+        </li>
+        <!-- <ul>
+          <li>
+            Developed schedules, plans, and work breakdown structures to arrange
+            individual and group itineraries, taking into account business costs
+            and target margins.
+          </li>
+          <li>
+            Managed client accounts, both existing and new, by analyzing market
+            needs and generating a robust list of quality leads.
+          </li>
+          <li>
+            Effectively communicated with individual clients, presenting product
+            packages utilizing extensive product knowledge and leveraging
+            various travel arrangement tools such as Sabre.
+          </li>
+          <li>
+            Negotiated with third-party service providers to secure the best
+            prices and value for customers.
+          </li>
+        </ul> -->
+        <li>
+          <span>
+            <strong>AIR LINK INTERNATIONAL</strong> &mdash; Fixed-base operator
+            (FBO) providing full business aviation services, such as perfectly
+            coordinated flight operation, charter, and aircraft management.
+          </span>
+          <span>Jun 2007–Dec 2013</span>
+        </li>
+        <!-- <ul>
+          <li>
+            Developed and implemented strategies to establish and enhance the
+            travel services department within a fixed-base operation company
+          </li>
+          <li>
+            Oversaw all aspects of travel services, including crew travel
+            arrangements, tourism department development, and partnerships with
+            travel providers
+          </li>
+          <li>
+            Negotiated contracts with travel providers, ensuring favorable terms
+            and cost-effective solutions for the company
+          </li>
+          <li>
+            Collaborated with various departments to streamline operational
+            processes and optimize workflow
+          </li>
+          <li>
+            Implemented revenue-generating initiatives to drive additional
+            income for the company through travel services
+          </li>
+          <li>
+            Monitored and analyzed departmental performance, identifying areas
+            for improvement and implementing corrective actions
+          </li>
+          <li>
+            Cultivated and maintained strong relationships with travel
+            providers, fostering long-term partnerships
+          </li>
+          <li>
+            Led a team of travel professionals, providing guidance, support, and
+            training to ensure the delivery of exceptional services
+          </li>
+          <li>
+            Led and mentored a team of travel professionals, ensuring
+            exceptional service delivery Managed staff hiring process, including
+            recruitment, interviewing, and candidate selection Provided ongoing
+            coaching and mentoring to foster professional growth and development
+          </li>
+          <li>
+            Prepared comprehensive reports and presentations on departmental
+            performance, revenue generation, and partner relationships for
+            senior management
+          </li>
+        </ul> -->
+      </ul>
     </section>
 
-    <section id = "skills">
-        <h2> Skills </h2>
-        <ul> 
-        </ul>
+    <!-- SKILLS SECTION  -->
 
+    <section id="skills">
+      <div class="skills">
+        <h2 class="skills__head">Skills</h2>
+        <ul class="box__skills"></ul>
+      </div>
     </section>
-<section id="projects">
-    <h2> Projects: </h2>
-    <ul class="project-list"> 
-        <li> <a href="https://color-flipper-js-js.netlify.app/" target="_blank">ColorFlipper </a></li>
-        <li> <a href="https://counter-js-js.netlify.app/" target="_blank">Counter</a></li>
-        <li> <a href="https://reviews-js-js.netlify.app/" target="_blank">Reviews</a></li>
-        <li> <a href="https://navbar-js-js.netlify.app/" target="_blank">Navbar</a></li>
-        <li> <a href="https://sidebar-js-js.netlify.app/" target="_blank">Sidebar</a></li>
-        <li> <a href="https://modal-js-js.netlify.app/" target="_blank">Modal</a></li>
-        <li> <a href="https://questions-js-js.netlify.app/" target="_blank">Questions</a></li>
-        <li> <a href="https://menu-js-js.netlify.app/" target="_blank">Menu</a></li>
-        <li> <a href="https://video-js-js.netlify.app/" target="_blank">Video</a></li>
-        <li> <a href="https://scroll-js-js.netlify.app/" target="_blank">Scroll</a></li>
-    </ul>
+
+    <!-- PORTFOLIO SECTION STARTS -->
+
+<section class="projects" id="projects">
+  <div class="container project-list">
+      <h2 class="projects__header">Projects</h2>
+      <div class="projects__cards project">
+        <div class="projects__card">
+            <p class="projects__subtitle">AisanceStudio</p>
+            <h4 class="projects__title">HTML5/CSS3/Gsap</h4>
+            <a rel="noopener" href="https://aisancestudioproject-nkm.glitch.me/"  target="_blank">
+            <img src="./media/img-projects/aisance-studio-pr.png" alt="aisancestudio-cover">
+            </a>
+        </div>
+        <div class="projects__card project">
+            <p class="projects__subtitle">TerraLaw Layer Firm</p>
+            <h4 class="projects__title">HTML5/CSS3/Bootstrap 5.2</h4>
+            <a rel="noopener" href="https://terralawproject-bootstrap-km.glitch.me/" target="_blank">
+            <img src="./media/img-projects/terra-law-pr.png" alt="terralaw-cover">
+            </a>
+        </div>
+        <div class="projects__card project">
+            <p class="projects__subtitle">AmilyPhotographer</p>
+            <h4 class="projects__title">HTML5/CSS3/Bootstrap 5.2</h4>
+            <a rel="noopener" href="https://amily-photographer-project-km.glitch.me/" target="_blank">
+            <img src="./media/img-projects/amily-photo-pr.png" alt="amilyphotographer-cover">
+            </a>
+        </div>
+        <div class="projects__card">
+            <p class="projects__subtitle">Weather Forecast Project</p>
+            <h4 class="projects__title">HTML5/CSS3/JS/API</h4>
+            <a rel="noopener" href="https://weather-app-km.glitch.me/" target="_blank">
+            <img src="./media/img-projects/weather-forcast-pr.png" alt="Weather Forcast Project cover">
+            </a>
+        </div>
+        <div class="projects__card">
+            <p class="projects__subtitle">Expo Project/Countdown</p>
+            <h4 class="projects__title">HTML5/CSS3/JS</h4>
+            <a rel="noopener" href="https://expo-project-countdown-js-km.glitch.me/" target="_blank">
+            <img src="./media/img-projects/expo-count-pr.png" alt="Expo Project">
+            </a>
+        </div>
+        <div class="projects__card">
+            <p class="projects__subtitle">Guess Game</p>
+            <h4 class="projects__title">HTML5/CSS3/JS</h4>
+            <a rel="noopener" href="https://guess-game-project2-js-km.glitch.me/" target="_blank">
+            <img src="./media/img-projects/guess-game-pr.png" alt="Guess Game">
+            </a>
+        </div>
+      </div>
+  </div>
 </section>
 
-    <section>
-        <h2> Connect </h2>
-        <a href="https://github.com/katemikh" target="_blank"> My GitHub </a>
-    </section>
+<section id="contact">
+  <div class="connect">
+      <h2>Contact Me</h2>
+      <ul class="connect-list">
+        <li class="link-item">
+            <a rel="noopener" href="https://github.com/katemikh" target="_blank"> My GitHub</a>
+        </li>
+        <li class="link-item">
+            <a href="mailto:cooperation.ca@yahoo.com" target="_blank"
+              >E-mail Me</a
+              >
+        </li>
+        <li class="link-item">
+            <a rel="noopener" href="https://t.me/mikhailiukk/" target="_blank">Telegram</a>
+        </li>
+      </ul>
+  </div>
+</section>
 
-    <section>
-        <h2>Leave a Message</h2>
-        <form name="leave_message">
-            <label for="usersName">Name:</label>
-            <input id="name" type="text" name="usersName" required>
-            <br>
+<section id="form">
+  <h2>Leave a Message</h2>
+  <form name="leave_message">
+      <label for="usersName">Name:</label>
+      <input type="text" aria-labelledby="firstname" id="name" name="usersName" required placeholder="UserName"/>
+      <br />
 
-            <label for="usersEmail">Email:</label>
-            <input id="email" type="email" name="usersEmail" required>
-            <br>
+      <label for="usersEmail">Email:</label>
+      <input type="email" name="usersEmail" id="email" required placeholder="E-mail"/>
+      <br />
 
-            <label for="usersMessage">Message:</label>
-            <textarea id="message" name="usersMessage" required></textarea>
-            <br>
+      <label for="usersMessage">Message:</label>
+      <textarea type="text" name="usersMessage" id="message" placeholder="Enter your message..." required></textarea>
+      <br />
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+      <button class="btn1" type="submit">Submit</button>
+  </form>
+</section>
 
-    <section id="messages">
-        <h2>Messages</h2>
-        <ul>
-            <!-- Message list goes here -->
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </section>
+<section id="messages">
+  <h2>Messages</h2>
+  <ul class="messages">
+      <!-- Message list goes here -->
+  </ul>
+</section>
 
-    <footer>  
-        
-    </footer>
+<footer>
+  <div class="social">
+    <a aria-label="Linkedin Profile Kateryna Mikhailiuk"
+        class="icons__style"
+        href="https://www.linkedin.com/in/kateryna-mikhailiuk/"
+        ><i class="fa fa-linkedin"></i
+        ></a>
+      <a aria-label="Instagram Profile Kateryna Mikhailiuk"
+        class="icons__style"
+        href="https://www.instagram.com/katerinamikhailiuk/"
+        ><i class="fa fa-instagram"></i
+        ></a>
+      <a aria-label="GitHub Profile Kateryna Mikhailiuk"
+        class="icons__style" href="https://github.com/katemikh/"
+        ><i class="fa fa-github"></i
+        ></a>
+      <a rel="noopener" aria-label="Telegram Profile Kateryna Mikhailiuk"
+        class="icons__style" href="https://t.me/mikhailiukk/" target="_blank"
+        ><i class="fa fa-telegram" aria-hidden="true"></i
+        ></a>
+  </div>
+</footer>
 
-    <script src="js/index.js"></script>
-    
-</body>
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
 </html>
-

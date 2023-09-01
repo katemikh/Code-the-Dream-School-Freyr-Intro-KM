@@ -7,42 +7,66 @@ const copyright = document.createElement("p");
 copyright.innerHTML = `&copy; ${thisYear} Kateryna Mikhailiuk`;
 footer.appendChild(copyright);
 
-const skills = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "Bootstrap",
-  "API",
-  "GSAP",
-  "Figma",
-  "Excellent written and verbal communication skills",
-  "Strong organizational and time-management skills",
-  "Proven problem-solving abilities with quick and effective issue resolution",
-  "Ability to work independently and in a fast-paced, dynamic environment",
-  "Proficient in Microsoft Office, including MS Project ",
+
+// Array of skills and their corresponding icons
+const skillsWithIcons = [
+  { skill: "HTML5", icon: "/media/img-skills/html.png" },
+  { skill: "CSS3", icon: "/media/img-skills/css3.png" },
+  { skill: "JavaScript", icon: "/media/img-skills/js.png" },
+  { skill: "Bootstrap", icon: "/media/img-skills/bootstrap.png" },
+  { skill: "API", icon: "/media/img-skills/api.png" },
+  { skill: "GSAP", icon: "/media/img-skills/gsap-bw.png" },
+  { skill: "Figma", icon: "/media/img-skills/figma.png" },
+  { skill: "React", icon: "/media/img-skills/react.png" },
+  // Add more skills and icons as needed
 ];
-const skillsSection = document.querySelector("#skills");
-const skillsList = skillsSection.querySelector("ul");
 
-for (let i = 0; i < skills.length; i++) {
-  const skill = document.createElement("li");
-  skill.innerText = skills[i];
-  skillsList.appendChild(skill);
-}
+const boxSkills = document.querySelector(".box__skills");
 
-const projectSection = document.getElementById("projects");
-const projectList = projectSection.querySelector("ul");
+// Loop through skills array and create list items with icons
+skillsWithIcons.forEach((skillData) => {
+  const listItem = document.createElement("li");
+  const skillIcon = document.createElement("img");
+
+  listItem.textContent = skillData.skill;
+  skillIcon.src = skillData.icon;
+  skillIcon.alt = `${skillData.skill} Icon`;
+
+  listItem.appendChild(skillIcon);
+  boxSkills.appendChild(listItem);
+});
+
+
+// const skills = [
+//   'HTML5',
+//   'CSS3',
+//   'JavaScript',
+//   'Bootstrap',
+//   'API',
+//   'GSAP',
+//   'Figma',
+// ];
+
+// const skillsSection = document.querySelector('#skills');
+// const skillsList = skillsSection.querySelector('ul');
+
+// for (let i = 0; i < skills.length; i++) {
+//   const skill = document.createElement('li');
+//   skill.innerText = skills[i];
+//   skillsList.appendChild(skill);
+// }
+
+
 
 // lesson-4-3
 // DOM Selection
-  const messageForm = document.forms.leave_message;
-  const messageSection = document.querySelector("#messages");
-  const messageList = messageSection.querySelector("ul");
+const messageForm = document.forms.leave_message;
+const messageSection = document.querySelector("#messages");
+const messageList = messageSection.querySelector("ul");
 
-
-  // Event Listener
-  messageForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission behavior
+// Event Listener
+messageForm.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default form submission behavior
 
 // Retrieve form field values
   const usersName = event.target.usersName.value;
@@ -61,14 +85,14 @@ const projectList = projectSection.querySelector("ul");
   event.target.reset();
 //or
 
-// Clear form fields
+  // Clear form fields
 //messageForm.reset();
 
 // Create new list item
   const newMessage = document.createElement("li");
   newMessage.innerHTML = `
-  <a href="mailto:${usersEmail}">${usersName}</a>
-    <span>${usersMessage}</span> <br>
+  <a href="mailto:${usersEmail}">${usersName} wrote: </a>
+    <span>${usersMessage}</span>
   `;
 
 // Create remove button
@@ -77,13 +101,13 @@ const projectList = projectSection.querySelector("ul");
   removeButton.type = "button";
   removeButton.addEventListener("click", function () {
     const entry = removeButton.parentNode;
-  entry.remove();
+    entry.remove();
 
 // Check if the message list is empty
-  if (messageList.children.length === 0) {
-    messageSection.style.display = "none";
-  }
-});
+    if (messageList.children.length === 0) {
+      messageSection.style.display = "none";
+    }
+  });
 
 // Create edit button
   const editButton = document.createElement("button");
@@ -93,11 +117,10 @@ const projectList = projectSection.querySelector("ul");
     const entry = editButton.parentNode;
     const span = entry.querySelector("span");
     const editedMessage = prompt("Edit the message:", span.textContent);
-      if (editedMessage !== null) {
+    if (editedMessage !== null) {
       span.textContent = editedMessage;
-      }
-});
-
+    }
+  });
 
 // Append edit button, remove button, and new message to list
   newMessage.appendChild(editButton);
@@ -105,6 +128,9 @@ const projectList = projectSection.querySelector("ul");
   messageList.appendChild(newMessage);
 
 // Show the message section
-  messageSection.style.display = "block";
-
+  messageSection.style.display = "flex";
 });
+
+
+const projectSection = document.getElementById("projects");
+const projectList = projectSection.querySelector("ul");
