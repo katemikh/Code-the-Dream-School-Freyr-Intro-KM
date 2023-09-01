@@ -269,6 +269,19 @@ button {
 }
 
 /*---------------------- Experience section -------------------*/
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(minmax(300px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  gap: 20px;
+}
+
+.experience-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
 .experience {
   display: flex;
   flex-direction: column;
