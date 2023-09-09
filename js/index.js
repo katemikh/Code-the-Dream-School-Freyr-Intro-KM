@@ -131,6 +131,55 @@ messageForm.addEventListener("submit", function (event) {
   messageSection.style.display = "flex";
 });
 
+//Projects
 
-const projectSection = document.getElementById("projects");
-const projectList = projectSection.querySelector("ul");
+// Create a new XMLHttpRequest object
+const githubRequest = new XMLHttpRequest();
+
+// Open a GET request to the GitHub API URL with your GitHub username
+githubRequest.open("GET", "https://api.github.com/users/katemikh/repos");
+
+// Send the GET request
+githubRequest.send();
+
+// Add a "load" event listener to handle the response
+githubRequest.addEventListener("load", function (event) {
+  // Parse the response and store it in the 'repositories' variable
+  const repositories = JSON.parse(this.response);
+  // Log the list of repositories in the console
+  console.log(repositories);
+
+  const projectSection = document.getElementById("projects");
+  const projectList = projectSection.querySelector("ul");
+
+  // Specify the repository names you want to display
+  const targetRepositoryNames = [
+    "js-lets-split-our-bill",
+    "js-embraer-presentation-countdown",
+    "Methed-Warm-Floor",
+    "js-travel-destination-search",
+  ];
+
+  for (let i = 0; i < repositories.length; i++) {
+    const repositoryName = repositories[i].name;
+
+    // Check if the current repository name is in the target list
+    if (targetRepositoryNames.includes(repositoryName)) {
+      const project = document.createElement("li");
+      const repoLink = document.createElement("a");
+      repoLink.href = repositories[i].html_url;
+      repoLink.textContent = repositoryName;
+
+      const description = document.createElement("p");
+      description.textContent = repositories[i].description;
+
+      const language = document.createElement("span");
+      language.textContent = "Language: " + repositories[i].language;
+
+      project.appendChild(repoLink);
+      project.appendChild(description);
+      project.appendChild(language);
+      projectList.appendChild(project);
+    }
+  }
+});
