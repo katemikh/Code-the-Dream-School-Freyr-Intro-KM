@@ -9,14 +9,14 @@ footer.appendChild(copyright);
 
 // Array of skills and their corresponding icons
 const skillsWithIcons = [
-  { skill: "HTML5", icon: "/media/img-skills/html.png" },
-  { skill: "CSS3", icon: "/media/img-skills/css3.png" },
-  { skill: "JavaScript", icon: "/media/img-skills/js.png" },
-  { skill: "Bootstrap", icon: "/media/img-skills/bootstrap.png" },
-  { skill: "API", icon: "/media/img-skills/api.png" },
-  { skill: "GSAP", icon: "/media/img-skills/gsap-bw.png" },
-  { skill: "Figma", icon: "/media/img-skills/figma.png" },
-  { skill: "React", icon: "/media/img-skills/react.png" },
+  { skill: "HTML5", icon: "media/img-skills/html.png" },
+  { skill: "CSS3", icon: "media/img-skills/css3.png" },
+  { skill: "JavaScript", icon: "media/img-skills/js.png" },
+  { skill: "Bootstrap", icon: "media/img-skills/bootstrap.png" },
+  { skill: "API", icon: "media/img-skills/api.png" },
+  { skill: "GSAP", icon: "media/img-skills/gsap-bw.png" },
+  { skill: "Figma", icon: "media/img-skills/figma.png" },
+  { skill: "React", icon: "media/img-skills/react.png" },
   // Add more skills and icons as needed
 ];
 
