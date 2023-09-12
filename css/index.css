@@ -2,11 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+	outline: none;
+	border: none;
+	transition: all .2s linear;
+}
+
+*::selection {
+	background: #03dac6;
+	color: #fff;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
+	overflow-x: hidden;
+} 
+  
+html::-webkit-scrollbar {
+	width: 1.4em;
 }
+
+html::-webkit-scrollbar-track {
+	background: #fff;
+} 
+
+html::-webkit-scrollbar-thumb {
+	background: #03dac6;
+} 
 
 /* .hidden {
   display: none;
@@ -58,6 +81,7 @@ h4 {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 p {
@@ -67,6 +91,7 @@ p {
 
 li {
   font-size: 15px;
+  list-style: none;
 }
 
 span {
@@ -122,7 +147,120 @@ header .navbar ul li a:hover {
   transition: color 0.3s ease;
 }
 
+
+
 /*--------------------- Burger menu styles - start -  Will continue to work later--------------------*/
+
+/* burger menu */
+
+header #burger-menu {
+	cursor: pointer;
+	height: 27px;
+	width: 27px;
+	margin: 10px;
+	overflow: visible;
+	position: relative;
+	z-index: 2;
+	display: none;
+}
+
+#burger-menu span,
+#burger-menu span:before,
+#burger-menu span:after {
+	background: #fff;
+	display: block;
+	height: 4px;
+	opacity: 1;
+	position: absolute;
+	transition: 0.3s ease-in-out;
+}
+
+#burger-menu span:before,
+#burger-menu span:after {
+	content: "";
+}
+
+#burger-menu span {
+	right: -40px;
+	top: 13px;
+	width: 30px;
+}
+
+#burger-menu span:before {
+	left: 0px;
+	top: -10px;
+	width: 30px;
+}
+
+#burger-menu span:after {
+	left: 0px;
+	top: 10px;
+	width: 30px;
+}
+
+#burger-menu.close span {
+	transform: rotate(-45deg);
+	top: 30px;
+	width: 30px;
+	background-color: white;
+}
+
+#burger-menu.close span:before {
+	top: 0px;
+	transform: rotate(90deg);
+	width: 30px;
+	background-color: white;
+}
+
+#burger-menu.close span:after {
+	top: 0px;
+	left: 0;
+	transform: rotate(90deg);
+	opacity: 0;
+	width: 0;
+
+}
+
+#menu {
+	z-index: 1;
+	min-width: 50%;
+	min-height: 100%;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	visibility: hidden;
+	opacity: 0;
+	text-align: right;
+	padding-top: 3rem;
+	padding-right: 5rem;
+	transition: all 0.3s ease-in-out;
+
+}
+
+#menu.overlay {
+	visibility: visible;
+	opacity: 1;
+	padding-top: 100px;
+	background: transparent;
+}
+
+#menu li {
+	list-style: none;
+}
+
+#menu a {
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	margin-bottom: 30px;
+	text-decoration: none;
+}
+
+#menu a:hover {
+	font-size: 26px;
+}
+
+
 
 /*--------------------- Burger menu styles - end--------------------*/
 
@@ -583,6 +721,7 @@ footer p {
   -webkit-background-clip: text;
   background-clip: text;
   transition: color 0.3s;
+  
 }
 
 
@@ -592,6 +731,16 @@ footer p {
 @media all and (max-width: 1280px) {
 }
 
+@media all and (max-width: 912px) {
+  header #burger-menu {
+		display: block;
+	}
+
+	header .navbar {
+		position: fixed;
+		opacity: 0;
+	}
+}
 @media all and (max-width: 991px) {
   html {
     font-size: 55%;
@@ -627,6 +776,19 @@ footer p {
 }
 
 @media all and (max-width: 820px) {
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+.box__about h2 {
+  font-size: 20px;
+}
+p {
+  font-size: 14px;;
+}
   header #burger-menu {
     display: block;
   }
@@ -635,9 +797,24 @@ footer p {
     position: fixed;
     opacity: 0;
   }
+
 }
 
 @media all and (max-width: 768px) {
+
+  
+/* Media Query for Responsive Design */
+ .burger-menu {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
 }
 
 @media all and (max-width: 540px) {
@@ -647,14 +824,11 @@ footer p {
   html {
     font-size: 50%;
   }
-  html {
-    font-size: 50%;
-  }
-
+/* 
   section {
     padding: 1rem 5%;
     padding-top: 5.5rem;
-  }
+  } */
 
   #burger-menu span {
     right: -20px;
@@ -672,7 +846,6 @@ footer p {
 
 @media all and (max-width: 280px) {
 }
-
 
 
 

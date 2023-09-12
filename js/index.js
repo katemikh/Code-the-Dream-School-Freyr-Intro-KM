@@ -7,7 +7,6 @@ const copyright = document.createElement("p");
 copyright.innerHTML = `&copy; ${thisYear} Kateryna Mikhailiuk`;
 footer.appendChild(copyright);
 
-
 // Array of skills and their corresponding icons
 const skillsWithIcons = [
   { skill: "HTML5", icon: "/media/img-skills/html.png" },
@@ -36,7 +35,6 @@ skillsWithIcons.forEach((skillData) => {
   boxSkills.appendChild(listItem);
 });
 
-
 // const skills = [
 //   'HTML5',
 //   'CSS3',
@@ -56,8 +54,6 @@ skillsWithIcons.forEach((skillData) => {
 //   skillsList.appendChild(skill);
 // }
 
-
-
 // lesson-4-3
 // DOM Selection
 const messageForm = document.forms.leave_message;
@@ -68,34 +64,34 @@ const messageList = messageSection.querySelector("ul");
 messageForm.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent default form submission behavior
 
-// Retrieve form field values
+  // Retrieve form field values
   const usersName = event.target.usersName.value;
-//const usersName = messageForm.usersName.value;
+  //const usersName = messageForm.usersName.value;
   const usersEmail = event.target.usersEmail.value;
-//const usersEmail = messageForm.usersEmail.value;
+  //const usersEmail = messageForm.usersEmail.value;
   const usersMessage = event.target.usersMessage.value;
-//const usersMessage = messageForm.usersMessage.value;
+  //const usersMessage = messageForm.usersMessage.value;
 
-// Log form field values
+  // Log form field values
   console.log("Name:", usersName);
   console.log("Email:", usersEmail);
   console.log("Message:", usersMessage);
 
-//  Clear the form fields
+  //  Clear the form fields
   event.target.reset();
-//or
+  //or
 
   // Clear form fields
-//messageForm.reset();
+  //messageForm.reset();
 
-// Create new list item
+  // Create new list item
   const newMessage = document.createElement("li");
   newMessage.innerHTML = `
   <a href="mailto:${usersEmail}">${usersName} wrote: </a>
     <span>${usersMessage}</span>
   `;
 
-// Create remove button
+  // Create remove button
   const removeButton = document.createElement("button");
   removeButton.innerText = "Remove";
   removeButton.type = "button";
@@ -103,13 +99,13 @@ messageForm.addEventListener("submit", function (event) {
     const entry = removeButton.parentNode;
     entry.remove();
 
-// Check if the message list is empty
+    // Check if the message list is empty
     if (messageList.children.length === 0) {
       messageSection.style.display = "none";
     }
   });
 
-// Create edit button
+  // Create edit button
   const editButton = document.createElement("button");
   editButton.innerText = "Edit";
   editButton.type = "button";
@@ -122,64 +118,74 @@ messageForm.addEventListener("submit", function (event) {
     }
   });
 
-// Append edit button, remove button, and new message to list
+  // Append edit button, remove button, and new message to list
   newMessage.appendChild(editButton);
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
 
-// Show the message section
+  // Show the message section
   messageSection.style.display = "flex";
 });
 
 //Projects
 
-// Create a new XMLHttpRequest object
-const githubRequest = new XMLHttpRequest();
+// Create a Fetch API GET request to the GitHub API URL
+fetch("https://api.github.com/users/katemikh/repos")
+  // Chain a "then" method to handle the response and parse it as JSON
+  .then((response) => response.json())
+  // Chain another "then" method to handle the parsed JSON data
+  .then((repositories) => {
+    // Log the list of repositories in the console
+    console.log(repositories);
 
-// Open a GET request to the GitHub API URL with your GitHub username
-githubRequest.open("GET", "https://api.github.com/users/katemikh/repos");
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
 
-// Send the GET request
-githubRequest.send();
+    // Specifying the repository names to display
+    const targetRepositoryNames = [
+      "js-lets-split-our-bill",
+      "js-embraer-presentation-countdown",
+      "Methed-Warm-Floor",
+      "js-travel-destination-search",
+    ];
 
-// Add a "load" event listener to handle the response
-githubRequest.addEventListener("load", function (event) {
-  // Parse the response and store it in the 'repositories' variable
-  const repositories = JSON.parse(this.response);
-  // Log the list of repositories in the console
-  console.log(repositories);
+    for (let i = 0; i < repositories.length; i++) {
+      const repositoryName = repositories[i].name;
 
-  const projectSection = document.getElementById("projects");
-  const projectList = projectSection.querySelector("ul");
+      // Check if the current repository name is in the target list
+      if (targetRepositoryNames.includes(repositoryName)) {
+        const project = document.createElement("li");
+        const repoLink = document.createElement("a");
+        repoLink.href = repositories[i].html_url;
+        repoLink.textContent = repositoryName;
 
-  // Specify the repository names you want to display
-  const targetRepositoryNames = [
-    "js-lets-split-our-bill",
-    "js-embraer-presentation-countdown",
-    "Methed-Warm-Floor",
-    "js-travel-destination-search",
-  ];
+        const description = document.createElement("p");
+        description.textContent = repositories[i].description;
 
-  for (let i = 0; i < repositories.length; i++) {
-    const repositoryName = repositories[i].name;
+        const language = document.createElement("span");
+        language.textContent = "Language: " + repositories[i].language;
 
-    // Check if the current repository name is in the target list
-    if (targetRepositoryNames.includes(repositoryName)) {
-      const project = document.createElement("li");
-      const repoLink = document.createElement("a");
-      repoLink.href = repositories[i].html_url;
-      repoLink.textContent = repositoryName;
-
-      const description = document.createElement("p");
-      description.textContent = repositories[i].description;
-
-      const language = document.createElement("span");
-      language.textContent = "Language: " + repositories[i].language;
-
-      project.appendChild(repoLink);
-      project.appendChild(description);
-      project.appendChild(language);
-      projectList.appendChild(project);
+        project.appendChild(repoLink);
+        project.appendChild(description);
+        project.appendChild(language);
+        projectList.appendChild(project);
+      }
     }
-  }
+  })
+  // Chain a "catch" method to handle errors (optional)
+  .catch((error) => {
+    console.error("Error fetching data: ", error);
+  });
+
+
+// burger menu
+
+let burgerMenu = document.querySelector("#burger-menu");
+let overlay = document.querySelector("#menu");
+
+burgerMenu.addEventListener("click", function(){
+    this.classList.toggle("close");
+    overlay.classList.toggle("overlay");
 });
+
+
