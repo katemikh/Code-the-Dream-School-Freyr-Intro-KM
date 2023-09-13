@@ -811,10 +811,14 @@ h2 {
 .btn1 {
   color: #fff;
 }
-button {
+/* button {
   padding: 11px 22px;
+} */
+
+button {
+    padding: 7px 12px;
 }
-  #burger-menu span {
+#burger-menu span {
     right: -20px;
     top: 13px;
     width: 30px;
@@ -823,8 +827,22 @@ button {
   .menu {
     min-height: 70vh;
   }
-}
 
+  .messages li {
+font-size: 12px;
+width: 280px;
+
+  }
+  .messages li span {
+    padding: 0 0 0 0;
+  }
+  .messages button {
+  font-size: 10px;
+  }
+
+element.style {
+}
+}
 @media all and (max-width: 414px) {
 }
 
