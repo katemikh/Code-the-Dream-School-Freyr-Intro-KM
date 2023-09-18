@@ -11,6 +11,15 @@
 *::selection {
   background: #03dac6;
   color: #fff;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+*::selection {
+  background: #03dac6;
+  color: #fff;
 }
 
 html {
