@@ -497,6 +497,9 @@ button {
 #projects a {
   text-decoration: none;
   color: #fff;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 #projects a:hover {

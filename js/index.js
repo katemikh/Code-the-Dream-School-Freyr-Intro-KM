@@ -142,12 +142,12 @@ function fetchAndDisplayProjects() {
           const description = document.createElement("p");
           description.textContent = repositories[i].description;
 
-          const language = document.createElement("span");
-          language.textContent = "Language: " + repositories[i].language;
+          // const language = document.createElement("span");
+          // language.textContent = "Language: " + repositories[i].language;
 
           project.appendChild(repoLink);
           project.appendChild(description);
-          project.appendChild(language);
+          // project.appendChild(language);
           projectList.appendChild(project);
         }
       }
@@ -176,6 +176,7 @@ function fetchAndDisplayProjects() {
 function setupBurgerMenu() {
   let burgerMenu = document.querySelector("#burger-menu");
   let overlay = document.querySelector("#menu");
+  let menuLi = document.querySelectorAll(".menu__li"); // Select all menu items
 
   function closeMenu() {
     burgerMenu.classList.remove("close");
@@ -198,6 +199,11 @@ function setupBurgerMenu() {
 
   // Close menu when the window resizes
   window.addEventListener("resize", closeMenu);
+
+  // Close menu when a menu item is clicked
+  menuLi.forEach((menuItem) => {
+    menuItem.addEventListener("click", closeMenu);
+  });
 }
 
 // Call the functions to execute the code
