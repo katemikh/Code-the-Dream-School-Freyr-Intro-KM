@@ -2,15 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+*::selection {
+  background: #03dac6;
+  color: #fff;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 60.5%;
+  /* overflow-x: hidden; */
 }
 
-/* .hidden {
-  display: none;
-} */
+html::-webkit-scrollbar {
+  width: 1.5em;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #03dac6;
+}
 
 body {
   background-color: #303030;
@@ -58,6 +77,7 @@ h4 {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 p {
@@ -67,11 +87,12 @@ p {
 
 li {
   font-size: 15px;
+  list-style: none;
 }
 
 span {
   font-size: 15px;
-  /* color: #04bbaa; */
+  color: #04bbaa;
 }
 
 /* Header styles */
@@ -106,7 +127,7 @@ header .navbar ul {
   align-items: center;
   justify-content: center;
   list-style: none;
-  gap: 40px;
+  gap: 20px;
 }
 
 header .navbar ul li a {
@@ -122,9 +143,114 @@ header .navbar ul li a:hover {
   transition: color 0.3s ease;
 }
 
-/*--------------------- Burger menu styles - start -  Will continue to work later--------------------*/
+/*--------------------- Burger menu styles - starts--------------------*/
 
-/*--------------------- Burger menu styles - end--------------------*/
+header #burger-menu {
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  margin: 10px;
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+  display: none;
+}
+
+#burger-menu span,
+#burger-menu span:before,
+#burger-menu span:after {
+  background: #fff;
+  display: block;
+  height: 4px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+
+#burger-menu span:before,
+#burger-menu span:after {
+  content: '';
+}
+
+#burger-menu span {
+  right: -40px;
+  top: 13px;
+  width: 30px;
+}
+
+#burger-menu span:before {
+  left: 0px;
+  top: -10px;
+  width: 30px;
+}
+
+#burger-menu span:after {
+  left: 0px;
+  top: 10px;
+  width: 30px;
+}
+
+#burger-menu.close span {
+  transform: rotate(-45deg);
+  top: 30px;
+  width: 30px;
+  background-color: white;
+}
+
+#burger-menu.close span:before {
+  top: 0px;
+  transform: rotate(90deg);
+  width: 30px;
+  background-color: white;
+}
+
+#burger-menu.close span:after {
+  top: 0px;
+  left: 0;
+  transform: rotate(90deg);
+  opacity: 0;
+  width: 0;
+}
+
+#menu {
+  z-index: 1;
+  min-width: 50%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  visibility: hidden;
+  opacity: 0;
+  text-align: right;
+  padding-top: 3rem;
+  padding-right: 5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  background: transparent;
+}
+
+#menu li {
+  list-style: none;
+}
+
+#menu a {
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  font-size: 26px;
+}
+
+/*--------------------- Burger menu styles - end--------------*/
 
 /*------------------- Center the entire section -------------*/
 .container__about {
@@ -135,16 +261,20 @@ header .navbar ul li a:hover {
   margin: 50px 0 0;
 }
 
-/* Style for the main content box */
+/* ------Style for the main content box------ */
 .box__about {
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.pic-logo {
+  width: 270px;
+}
 
 .box__about p {
-  line-height: 40px;
+  line-height: 30px;
   max-width: 1000px;
+  margin-top: 50px;
 }
 
 .box__about-skills {
@@ -178,13 +308,12 @@ header .navbar ul li a:hover {
 .box__skills li {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
 }
 
 .box__about-skills strong {
-  color:#04bbaa;
+  color: #04bbaa;
 }
-
 
 /*------------------- Style for buttons --------------*/
 
@@ -241,6 +370,15 @@ button {
 
 /*-------------------- Skills -------------------*/
 /* Center the entire section */
+
+.box__skills li {
+    font-size: 15px;
+    
+}
+.box__skills img {
+    width: 55px;
+    margin-top: 15px;
+}
 #skills {
   padding: 50px 50px 50px;
   width: 100%;
@@ -249,10 +387,10 @@ button {
 .skills {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
 }
 
-/* Style for the skills list container */
+/* --------Style for the skills list container ------------*/
 .box__skills {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -280,8 +418,7 @@ button {
 .experience-item {
   /* border: 1px solid #ccc;
   padding: 10px; */
-
-      /* max-width: 500px; */
+  /* max-width: 500px; */
   width: 100%;
   padding: 20px 10px;
   border: 1px solid white;
@@ -296,16 +433,16 @@ button {
   align-items: center;
 }
 
-/* Style for the experience list */
+/* -------------Style for the experience list------------ */
 .experience ul {
   list-style-type: none;
   text-align: left;
   margin: 50px 0 25px;
+  font-size: 17px;
 }
 
 .experience li {
   margin-bottom: 10px;
-
 }
 
 .experience-item:hover {
@@ -313,42 +450,35 @@ button {
   transition: 1s all ease;
 }
 
-/* Style for the span elements */
+/* -----------------Style for the span elements----------- */
 .experience span {
-  color: #03dac6;
+  /* color: #03dac6; */
+  color: #fff;
 }
 
 /*------------------ Projects section -------------------*/
-  #projects {
+#projects {
   display: flex;
   flex-direction: column;
-  align-items:center;
-  /* width: 100%; */
-}  
+  align-items: center;
+  width: 100%;
+}
 
 #projects ul {
   flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  
   list-style-type: none;
   padding: 0;
   margin: 50px 0 0;
 }
 
 #projects li {
-  margin-bottom: 10px;
-  margin: 50px 100px 0;
-
   display: flex;
   flex-direction: column;
-
-  /* border: 1px solid #ccc;
-  padding: 10px; */
-
+  margin: 50px 50px 0;
   max-width: 500px;
-  width: 100%;
   padding: 20px 10px;
   border: 1px solid white;
   border-radius: 3px;
@@ -368,61 +498,7 @@ button {
   transition: 1s all ease;
 }
 
-/* --------- cards --------------- */
-
-.projects {
-  padding: 20px;
-  margin-top: 100px;
-}
-
-.projects__header {
-  margin: 10px 0 40px;
-  letter-spacing: 2px;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.projects__cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.projects__card {
-  margin: 50px;
-  width: 300px;
-}
-
-.projects__card:hover {
-  filter: opacity(0.6)
-}
-
-.projects__card a {
-  display: inline-block;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.projects__card img{
-  width: 100%;
-}
-.projects__card .projects__subtitle {
-  font-size: 23px;
-  text-align: center;
-}
-.projects__card .projects__title {
-  font-size: 20px;
-  text-align: center;
-}
-
-.projects__card h4 {
-  margin-bottom: 20px;
-}
-
-
-/*--------------- Connect Section------------*/
+/*--------------- Connect/Contact Section---------------------------*/
 #contact {
   display: flex;
   justify-content: center;
@@ -431,7 +507,7 @@ button {
   text-align: center;
 }
 
-/* Style for the connect list container */
+/* -------------Style for the connect list container-------- */
 .connect-list {
   display: flex;
   flex-wrap: wrap;
@@ -449,7 +525,7 @@ button {
   text-decoration: underline;
 }
 
-/*--------------- Form Section-----------------*/
+/*--------------- Form Section---------------------*/
 #form {
   display: flex;
   flex-direction: column;
@@ -585,30 +661,37 @@ footer p {
   transition: color 0.3s;
 }
 
-
 /* -------------   Media queries ------  */
 
-
 @media all and (max-width: 1280px) {
+  
 }
 
+@media all and (max-width: 912px) {
+  header #burger-menu {
+    display: block;
+  }
+
+  header .navbar {
+    position: fixed;
+    opacity: 0;
+  }
+}
 @media all and (max-width: 991px) {
   html {
     font-size: 55%;
   }
 
-   #projects ul {
-  grid-template-columns: repeat(1, 1fr);
-  margin: 30px 0 0;
-}
+  #projects ul {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px 0 0;
+  }
 
-#projects li {
-  margin-bottom: 10px;
-  margin: 30px 100px 0;
-
-  max-width: 400px;
-  width: 100%;
-}
+  #projects li {
+    margin-bottom: 10px;
+    margin: 30px auto 0;
+    padding: 20px 40px 20px 10px;
+  }
 }
 
 @media all and (max-width: 912px) {
@@ -623,10 +706,22 @@ footer p {
     position: fixed;
     opacity: 0;
   }
-
 }
 
 @media all and (max-width: 820px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  .box__about h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
   header #burger-menu {
     display: block;
   }
@@ -638,25 +733,93 @@ footer p {
 }
 
 @media all and (max-width: 768px) {
+  .box__about-skills li {
+    max-width: 500px;
+  }
+  .box__about img {
+    width: 220px;
+  }
+  .burger-menu {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
 }
 
 @media all and (max-width: 540px) {
+  .box__about-skills li {
+    max-width: 350px;
+  }
+
+  .box__about img {
+    width: 200px;
+  }
 }
 
 @media all and (max-width: 500px) {
   html {
     font-size: 50%;
   }
-  html {
-    font-size: 50%;
-  }
 
-  section {
-    padding: 1rem 5%;
-    padding-top: 5.5rem;
+  section,
+  #skills {
+    padding: 40px 20px;
   }
+h1 {
+  font-size: 25px;
+}
 
-  #burger-menu span {
+h2 {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+#form h2 {
+    font-size: 20px;
+}
+
+#menu a {
+  font-size: 14px;
+}
+#menu a:hover {
+  font-size: 17px;
+}
+
+.experience span {
+    font-size: 10px;
+}
+.box__skills li {
+    font-size: 12px;
+    
+}
+.box__skills img {
+    width: 45px;
+    margin-top: 15px;
+}
+.connect-list {
+    gap: 10px;
+}
+  .pic-logo {
+  width: 200px;
+}
+
+.btn1 {
+  color: #fff;
+}
+/* button {
+  padding: 11px 22px;
+} */
+
+button {
+    padding: 7px 12px;
+}
+#burger-menu span {
     right: -20px;
     top: 13px;
     width: 30px;
@@ -665,15 +828,24 @@ footer p {
   .menu {
     min-height: 70vh;
   }
-}
 
+  .messages li {
+font-size: 12px;
+width: 280px;
+
+  }
+  .messages li span {
+    padding: 0 0 0 0;
+  }
+  .messages button {
+  font-size: 10px;
+  }
+
+element.style {
+}
+}
 @media all and (max-width: 414px) {
 }
 
 @media all and (max-width: 280px) {
 }
-
-
-
-
-
