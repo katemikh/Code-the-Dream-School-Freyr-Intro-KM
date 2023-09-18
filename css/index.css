@@ -499,7 +499,7 @@ button {
   color: #fff;
   margin-bottom: 17px;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
 }
 
 #projects a:hover {
