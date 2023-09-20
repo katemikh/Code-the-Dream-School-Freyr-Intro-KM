@@ -384,8 +384,7 @@ button {
 /* Center the entire section */
 
 .box__skills li {
-    font-size: 15px;
-    
+  font-size: 15px;
 }
 .box__skills img {
     width: 55px;
@@ -613,6 +612,8 @@ form button:hover {
 .messages {
   list-style-type: none;
   margin: 20px 0;
+  max-width: 900px;
+  width: 100%;
 }
 
 /* Style for message list items */
@@ -622,17 +623,21 @@ form button:hover {
   background-color: #444;
   padding: 20px;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
 }
 
 .messages li a {
   color: #e4e4e4;
-  padding: 0 10px 0 0;
+  padding: 0 10px 10px 0;
 }
 
 .messages li span {
-  padding: 0 40px 0 0;
+  /* padding: 0 40px 0 0;
+  overflow-wrap: anywhere; */
+  display: block;
+  padding: 30px 0 0 0;
 }
 
 .messages button {
@@ -640,10 +645,26 @@ form button:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin: 0 10px 0;
-  text-align: center;
   font-size: 14px;
+  width: 90px;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  top: 15px;
+  /* margin: 0 10px 0;
+  margin-top: 10px; */
 }
+
+
+.messages .btn-remove {
+  right: 0;
+  margin: 0 10px 0;
+}
+
+.messages .btn-edit {
+  right: 120px;
+}
+
 
 /*---------- Footer -------------*/
 footer {
@@ -679,7 +700,6 @@ footer p {
 /* -------------   Media queries ------  */
 
 @media all and (max-width: 1280px) {
-  
 }
 
 @media all and (max-width: 912px) {
@@ -769,6 +789,21 @@ footer p {
   right: -40px;
   display: block;
 }
+messages button {
+    font-size: 12px;
+    width: 70px;
+  }
+
+  .messages .btn-edit {
+    right: 90px;
+  }
+
+  .messages li span {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 625px) {
 }
 
 @media all and (max-width: 540px) {
@@ -834,9 +869,6 @@ h2 {
 .btn1 {
   color: #fff;
 }
-/* button {
-  padding: 11px 22px;
-} */
 
 button {
     padding: 7px 12px;
@@ -852,22 +884,58 @@ button {
   }
 
   .messages li {
-font-size: 12px;
-width: 280px;
-
-  }
-  .messages li span {
-    padding: 0 0 0 0;
+    font-size: 12px;
+    width: 100%;
   }
   .messages button {
   font-size: 10px;
+  width: 60px;
   }
-
-/* element.style {
-} */
+  .messages .btn-edit {
+    right: 75px;
+  }
 }
 @media all and (max-width: 414px) {
 }
 
 @media all and (max-width: 280px) {
+
+h2 {
+    font-size: 16px;
+  }
+#form h2 {
+    font-size: 15px;
+  }
+
+.box__about h2 {
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 12px;
+  color: #03dac6;
+}
+
+h4 {
+  font-size: 12px;
+  color: #03dac6;
+}
+
+p {
+  font-size: 12px;
+}
+
+header .logo .color {
+  font-size: 12px;
+}
+header .logo {
+  font-size: 12px;
+}
+projects a {
+  font-size: 8px;
+}
+
+.link-item a {
+  font-size: 10px;
+}
 }

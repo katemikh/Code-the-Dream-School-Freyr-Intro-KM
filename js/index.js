@@ -73,6 +73,7 @@ function setupLeaveMessageForm() {
     const removeButton = document.createElement("button");
     removeButton.innerText = "Remove";
     removeButton.type = "button";
+    removeButton.classList.add("btn-remove");
     removeButton.addEventListener("click", function () {
       const entry = removeButton.parentNode;
       entry.remove();
@@ -87,6 +88,7 @@ function setupLeaveMessageForm() {
     const editButton = document.createElement("button");
     editButton.innerText = "Edit";
     editButton.type = "button";
+    editButton.classList.add("btn-edit");
     editButton.addEventListener("click", function () {
       const entry = editButton.parentNode;
       const span = entry.querySelector("span");
