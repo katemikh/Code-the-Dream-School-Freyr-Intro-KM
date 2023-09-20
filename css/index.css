@@ -163,8 +163,7 @@ header #burger-menu {
   overflow: visible;
   position: relative;
   z-index: 2;
-  /* display: none; */
-  display: block;
+  display: none;
 }
 
 #burger-menu span,
@@ -766,6 +765,10 @@ footer p {
   .navbar {
     display: none;
   }
+  header #burger-menu {
+  right: -40px;
+  display: block;
+}
 }
 
 @media all and (max-width: 540px) {
