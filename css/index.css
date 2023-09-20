@@ -155,6 +155,7 @@ header .navbar ul li a:hover {
 /*--------------------- Burger menu styles - starts--------------------*/
 
 header #burger-menu {
+  right: -40px;
   cursor: pointer;
   height: 27px;
   width: 27px;
@@ -162,7 +163,8 @@ header #burger-menu {
   overflow: visible;
   position: relative;
   z-index: 2;
-  display: none;
+  /* display: none; */
+  display: block;
 }
 
 #burger-menu span,
@@ -182,7 +184,7 @@ header #burger-menu {
 }
 
 #burger-menu span {
-  right: -40px;
+  /* right: -40px; */
   top: 13px;
   width: 30px;
 }
@@ -224,7 +226,7 @@ header #burger-menu {
 #menu {
   z-index: 1;
   min-width: 50%;
-  min-height: 100%;
+  /* min-height: 100%; */
   position: fixed;
   top: 0;
   left: 50%;
@@ -234,6 +236,7 @@ header #burger-menu {
   padding-top: 3rem;
   padding-right: 5rem;
   transition: all 0.3s ease-in-out;
+  display: none;
 }
 
 #menu.overlay {
@@ -241,6 +244,7 @@ header #burger-menu {
   opacity: 1;
   padding-top: 100px;
   background: transparent;
+  display: block;
 }
 
 #menu li {
