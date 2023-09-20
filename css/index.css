@@ -11,6 +11,15 @@
 *::selection {
   background: #03dac6;
   color: #fff;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+*::selection {
+  background: #03dac6;
+  color: #fff;
 }
 
 html {
@@ -146,6 +155,7 @@ header .navbar ul li a:hover {
 /*--------------------- Burger menu styles - starts--------------------*/
 
 header #burger-menu {
+  right: -40px;
   cursor: pointer;
   height: 27px;
   width: 27px;
@@ -173,7 +183,7 @@ header #burger-menu {
 }
 
 #burger-menu span {
-  right: -40px;
+  /* right: -40px; */
   top: 13px;
   width: 30px;
 }
@@ -215,7 +225,7 @@ header #burger-menu {
 #menu {
   z-index: 1;
   min-width: 50%;
-  min-height: 100%;
+  /* min-height: 100%; */
   position: fixed;
   top: 0;
   left: 50%;
@@ -225,6 +235,7 @@ header #burger-menu {
   padding-top: 3rem;
   padding-right: 5rem;
   transition: all 0.3s ease-in-out;
+  display: none;
 }
 
 #menu.overlay {
@@ -232,6 +243,7 @@ header #burger-menu {
   opacity: 1;
   padding-top: 100px;
   background: transparent;
+  display: block;
 }
 
 #menu li {
@@ -250,7 +262,7 @@ header #burger-menu {
   font-size: 26px;
 }
 
-/*--------------------- Burger menu styles - end--------------------*/
+/*--------------------- Burger menu styles - end--------------*/
 
 /*------------------- Center the entire section -------------*/
 .container__about {
@@ -261,7 +273,7 @@ header #burger-menu {
   margin: 50px 0 0;
 }
 
-/* Style for the main content box */
+/* ------Style for the main content box------ */
 .box__about {
   text-align: center;
   border-radius: 8px;
@@ -372,8 +384,7 @@ button {
 /* Center the entire section */
 
 .box__skills li {
-    font-size: 15px;
-    
+  font-size: 15px;
 }
 .box__skills img {
     width: 55px;
@@ -390,7 +401,7 @@ button {
   align-items: center;
 }
 
-/* Style for the skills list container */
+/* --------Style for the skills list container ------------*/
 .box__skills {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -433,7 +444,7 @@ button {
   align-items: center;
 }
 
-/* Style for the experience list */
+/* -------------Style for the experience list------------ */
 .experience ul {
   list-style-type: none;
   text-align: left;
@@ -450,7 +461,7 @@ button {
   transition: 1s all ease;
 }
 
-/* Style for the span elements */
+/* -----------------Style for the span elements----------- */
 .experience span {
   /* color: #03dac6; */
   color: #fff;
@@ -488,6 +499,9 @@ button {
 #projects a {
   text-decoration: none;
   color: #fff;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #projects a:hover {
@@ -498,7 +512,7 @@ button {
   transition: 1s all ease;
 }
 
-/*--------------- Connect Section------------*/
+/*--------------- Connect/Contact Section---------------------------*/
 #contact {
   display: flex;
   justify-content: center;
@@ -507,7 +521,7 @@ button {
   text-align: center;
 }
 
-/* Style for the connect list container */
+/* -------------Style for the connect list container-------- */
 .connect-list {
   display: flex;
   flex-wrap: wrap;
@@ -525,7 +539,7 @@ button {
   text-decoration: underline;
 }
 
-/*--------------- Form Section-----------------*/
+/*--------------- Form Section---------------------*/
 #form {
   display: flex;
   flex-direction: column;
@@ -598,6 +612,8 @@ form button:hover {
 .messages {
   list-style-type: none;
   margin: 20px 0;
+  max-width: 900px;
+  width: 100%;
 }
 
 /* Style for message list items */
@@ -607,17 +623,21 @@ form button:hover {
   background-color: #444;
   padding: 20px;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
 }
 
 .messages li a {
   color: #e4e4e4;
-  padding: 0 10px 0 0;
+  padding: 0 10px 10px 0;
 }
 
 .messages li span {
-  padding: 0 40px 0 0;
+  /* padding: 0 40px 0 0;
+  overflow-wrap: anywhere; */
+  display: block;
+  padding: 30px 0 0 0;
 }
 
 .messages button {
@@ -625,10 +645,26 @@ form button:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin: 0 10px 0;
-  text-align: center;
   font-size: 14px;
+  width: 90px;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  top: 15px;
+  /* margin: 0 10px 0;
+  margin-top: 10px; */
 }
+
+
+.messages .btn-remove {
+  right: 0;
+  margin: 0 10px 0;
+}
+
+.messages .btn-edit {
+  right: 120px;
+}
+
 
 /*---------- Footer -------------*/
 footer {
@@ -749,6 +785,25 @@ footer p {
   .navbar {
     display: none;
   }
+  header #burger-menu {
+  right: -40px;
+  display: block;
+}
+messages button {
+    font-size: 12px;
+    width: 70px;
+  }
+
+  .messages .btn-edit {
+    right: 90px;
+  }
+
+  .messages li span {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 625px) {
 }
 
 @media all and (max-width: 540px) {
@@ -789,7 +844,10 @@ h2 {
 #menu a:hover {
   font-size: 17px;
 }
-
+  header #burger-menu {
+  right: -30px;
+  display: block;
+}
 .experience span {
     font-size: 10px;
 }
@@ -811,9 +869,6 @@ h2 {
 .btn1 {
   color: #fff;
 }
-/* button {
-  padding: 11px 22px;
-} */
 
 button {
     padding: 7px 12px;
@@ -829,22 +884,58 @@ button {
   }
 
   .messages li {
-font-size: 12px;
-width: 280px;
-
-  }
-  .messages li span {
-    padding: 0 0 0 0;
+    font-size: 12px;
+    width: 100%;
   }
   .messages button {
   font-size: 10px;
+  width: 60px;
   }
-
-element.style {
-}
+  .messages .btn-edit {
+    right: 75px;
+  }
 }
 @media all and (max-width: 414px) {
 }
 
 @media all and (max-width: 280px) {
+
+h2 {
+    font-size: 16px;
+  }
+#form h2 {
+    font-size: 15px;
+  }
+
+.box__about h2 {
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 12px;
+  color: #03dac6;
+}
+
+h4 {
+  font-size: 12px;
+  color: #03dac6;
+}
+
+p {
+  font-size: 12px;
+}
+
+header .logo .color {
+  font-size: 12px;
+}
+header .logo {
+  font-size: 12px;
+}
+projects a {
+  font-size: 8px;
+}
+
+.link-item a {
+  font-size: 10px;
+}
 }
