@@ -809,7 +809,10 @@ h2 {
 #menu a:hover {
   font-size: 17px;
 }
-
+  header #burger-menu {
+  right: -30px;
+  display: block;
+}
 .experience span {
     font-size: 10px;
 }
