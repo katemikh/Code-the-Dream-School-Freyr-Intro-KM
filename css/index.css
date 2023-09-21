@@ -580,6 +580,7 @@ form textarea {
   color: #e4e4e4;
   border-radius: 5px;
   margin: 0 0 10px 0;
+  font-size: 15px;
 }
 
 /* Style for form submit button */
@@ -596,6 +597,7 @@ form button .btn1 {
 
 form button:hover {
   background-color: #02b7a8;
+  color: #03dac6;
 }
 
 /*--------------- Messages --------------*/
@@ -614,6 +616,7 @@ form button:hover {
   margin: 20px 0;
   max-width: 900px;
   width: 100%;
+  font-size: 15px;
 }
 
 /* Style for message list items */
@@ -626,6 +629,7 @@ form button:hover {
   margin-top: 20px;
   width: 100%;
   position: relative;
+  
 }
 
 .messages li a {
@@ -651,10 +655,14 @@ form button:hover {
   padding: 10px 0;
   position: absolute;
   top: 15px;
-  /* margin: 0 10px 0;
-  margin-top: 10px; */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
+.messages button:hover {
+  background-color: #303030;
+  border: 1px solid white;
+  color: #03dac6;
+}
 
 .messages .btn-remove {
   right: 0;
@@ -801,6 +809,10 @@ messages button {
   .messages li span {
     font-size: 12px;
   }
+/* form input,
+form textarea {
+  font-size: 16px;
+} */
 }
 
 @media all and (max-width: 625px) {
